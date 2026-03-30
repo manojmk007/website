@@ -40,3 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# n8n workflow exports — keep off GitHub
+n8n-*.json
+server-*-workflow.json
+*-workflow.json
