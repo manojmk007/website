@@ -59,7 +59,7 @@ export default function Nav() {
             alt="Dizilo"
             width={90}
             height={32}
-            style={{ objectFit: "contain", objectPosition: "left center" }}
+            style={{ objectFit: "contain", objectPosition: "left center", mixBlendMode: "screen" }}
             priority
           />
         </Link>

@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="Dizilo"
                 width={100}
                 height={36}
-                style={{ objectFit: "contain", objectPosition: "left center" }}
+                style={{ objectFit: "contain", objectPosition: "left center", mixBlendMode: "screen" }}
               />
             </div>
             <p className="ft-tag">
