@@ -4,23 +4,24 @@ import PageHero   from "@/components/PageHero";
 import Link       from "next/link";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Agenix",
+  title: "Case Studies",
+  alternates: { canonical: "https://dizilo.com/case-studies" },
   description:
     "Real results from live projects — pipeline growth, cost reduction, and automation that actually works.",
 };
 
 const cases = [
   {
-    id: "meridian",
+    id: "saas-lead-agent",
     cat: "B2B SaaS · Lead Qualification Agent",
-    company: "Meridian SaaS",
+    company: "B2B SaaS client",
     tagline: "Tripled pipeline in 90 days without a single new hire",
-    challenge: "Meridian's sales team was manually processing 400+ inbound leads per month with a 48-hour average response time. Qualified leads were getting cold before the team even reached them, and SDRs spent most of their day on admin rather than selling.",
-    solution: "We built a lead qualification agent that intercepts every inbound enquiry within seconds, enriches the lead with company data, scores it against Meridian's ICP, and either books a meeting directly or routes it into the appropriate nurture sequence. The sales team only engages when a lead is warm, qualified, and ready.",
+    challenge: "The client's sales team was manually processing 400+ inbound leads per month with a 48-hour average response time. Qualified leads were getting cold before the team even reached them, and SDRs spent most of their day on admin rather than selling.",
+    solution: "We built a lead qualification agent that intercepts every inbound enquiry within seconds, enriches the lead with company data, scores it against the client's ICP, and either books a meeting directly or routes it into the appropriate nurture sequence. The sales team only engages when a lead is warm, qualified, and ready.",
     quote: "Our SDRs used to spend most of their day sorting through leads. Now they only talk to people who are ready. Pipeline tripled in a quarter and we didn't add a single person to the team.",
-    quoteAuthor: "James Rothwell",
-    quoteRole: "CEO, Meridian SaaS",
-    quoteInitials: "JR",
+    quoteAuthor: "Founder",
+    quoteRole: "CEO · B2B SaaS (name withheld)",
+    quoteInitials: "—",
     metrics: [
       { v: "340%", l: "Pipeline growth in 90 days" },
       { v: "42 sec", l: "Response time (was 48 hrs)" },
@@ -31,16 +32,16 @@ const cases = [
     serviceHref: "/services/agents#leads",
   },
   {
-    id: "nexus",
+    id: "ecom-support-agent",
     cat: "E-Commerce · Store Support Agent",
-    company: "Nexus Retail",
+    company: "E-Commerce retailer",
     tagline: "Cut support costs 70% while increasing customer satisfaction",
-    challenge: "Nexus Retail's support team was handling 3,000+ queries per month across email and chat. Response times were averaging 6 hours during peak periods, CSAT was 3.8/5, and the support function was absorbing significant headcount and cost.",
-    solution: "We built a support agent trained on Nexus's product catalogue, order management system, and returns policy. It integrates directly with their WooCommerce store and handles order queries, return requests, and complaints across chat and WhatsApp — escalating to a human only when genuinely needed.",
+    challenge: "The client's support team was handling 3,000+ queries per month across email and chat. Response times were averaging 6 hours during peak periods, CSAT was 3.8/5, and the support function was absorbing significant headcount and cost.",
+    solution: "We built a support agent trained on the client's product catalogue, order management system, and returns policy. It integrates directly with their WooCommerce store and handles order queries, return requests, and complaints across chat and WhatsApp — escalating to a human only when genuinely needed.",
     quote: "We were sceptical about adding a support agent to our store. But CSAT went from 3.8 to 4.9 and support costs dropped 70%. Customers don't care if it's AI — they care about getting a fast, accurate answer.",
-    quoteAuthor: "Ananya Shah",
-    quoteRole: "Head of CX, Nexus Retail",
-    quoteInitials: "AS",
+    quoteAuthor: "Head of CX",
+    quoteRole: "E-Commerce retailer (name withheld)",
+    quoteInitials: "—",
     metrics: [
       { v: "−70%", l: "Support operating cost" },
       { v: "4.9/5", l: "CSAT score (was 3.8/5)" },
@@ -51,16 +52,16 @@ const cases = [
     serviceHref: "/services/agents#support",
   },
   {
-    id: "stratum",
+    id: "finance-automation",
     cat: "Finance · Workflow Automation",
-    company: "Stratum Finance",
+    company: "Financial services client",
     tagline: "Month-end close went from 5 days to 4 hours",
-    challenge: "Stratum's finance team was processing 2,000+ invoices per month entirely manually — reading, matching to POs, flagging discrepancies, and posting to their accounting system. Three team members spent the majority of their working week on data entry alone.",
+    challenge: "The client's finance team was processing 2,000+ invoices per month entirely manually — reading, matching to POs, flagging discrepancies, and posting to their accounting system. Three team members spent the majority of their working week on data entry alone.",
     solution: "We built an automated invoice processing pipeline that reads incoming invoices using document AI, matches against purchase orders, flags any discrepancies for human review, and posts approved entries directly to Xero. The human team reviews exceptions only — not every document.",
-    quote: "We'd spoken to larger agencies who wanted six months to scope the work. Agenix had us live in two weeks with results in the first few days. That's the difference between a consultancy and a team that actually builds things.",
-    quoteAuthor: "David Vance",
-    quoteRole: "CTO, Solara Energy",
-    quoteInitials: "DV",
+    quote: "We'd spoken to larger agencies who wanted six months to scope the work. Dizilo had us live in two weeks with results in the first few days. That's the difference between a consultancy and a team that actually builds things.",
+    quoteAuthor: "CTO",
+    quoteRole: "Financial services (name withheld)",
+    quoteInitials: "—",
     metrics: [
       { v: "99.97%", l: "Processing accuracy" },
       { v: "5d → 4h", l: "Month-end close time" },
@@ -78,7 +79,7 @@ export default function CaseStudiesPage() {
       <PageHero
         label="Case Studies"
         title={<>Real results,<br /><span className="m">real numbers.</span></>}
-        subtitle="Three businesses that used Agenix to cut costs, grow revenue, and get time back."
+        subtitle="Three businesses that used Dizilo to cut costs, grow revenue, and get time back."
       />
 
       {/* Summary stats */}

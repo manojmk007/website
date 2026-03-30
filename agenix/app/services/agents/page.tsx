@@ -4,9 +4,19 @@ import PageHero   from "@/components/PageHero";
 import Link       from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Agents — Agenix",
+  title: "AI Agents",
+  alternates: { canonical: "https://dizilo.com/services/agents" },
   description:
-    "Purpose-built AI agents for your store, your business, and your personal workflow. Not generic chatbots — agents that know your business and handle the job end-to-end.",
+    "Custom GenAI agents built with GPT-4o, Claude 3.5, LangChain, and n8n. Store agents, enterprise agents, RAG assistants, and multi-agent systems. Not chatbots — agents that take real action.",
+  keywords: [
+    "AI agents", "GenAI agent", "custom AI agent", "LangChain agent", "n8n AI workflow",
+    "GPT-4o agent", "Claude AI agent", "RAG assistant", "enterprise AI agent",
+    "LangGraph", "CrewAI", "Flowise", "AI agent development UK", "build AI agent Birmingham",
+  ],
+  openGraph: {
+    title: "Custom AI Agents — Dizilo",
+    description: "Lead qualification, support, outreach — purpose-built AI agents that take action, not just answer questions.",
+  },
 };
 
 const agents = [
@@ -32,7 +42,7 @@ const agents = [
     body: "Responds to inbound enquiries in seconds, qualifies against your criteria, books meetings or starts follow-up sequences — without your team lifting a finger. Works across email, web forms, and LinkedIn.",
     usecases: ["Instant inbound lead response", "Qualification against your ICP", "Meeting booking & calendar sync", "CRM enrichment & data entry", "Multi-channel: email, web, LinkedIn"],
     stat1: { v: "42 sec", l: "Average lead response time" },
-    stat2: { v: "340%",   l: "Pipeline growth (Meridian SaaS)" },
+    stat2: { v: "340%",   l: "Pipeline growth (B2B SaaS client)" },
   },
   {
     n: "04", tag: "Business", id: "finance",
@@ -147,14 +157,14 @@ export default function AgentsPage() {
       <section style={{ padding: "80px 0" }}>
         <div className="w">
           <span className="s-label rv">Integrations</span>
-          <h2 className="s-h rv d1">Connects to your existing tools</h2>
-          <p className="s-sub rv d2">We integrate with the tools you already use — no ripping and replacing your stack.</p>
+          <h2 className="s-h rv d1">Built on the best AI stack</h2>
+          <p className="s-sub rv d2">We use the latest GenAI models and agent frameworks — and connect them to the tools you already run.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginTop: 36 }}>
             {[
-              { cat: "Communication",  items: ["WhatsApp", "Email (any)", "Slack", "Intercom"]           },
-              { cat: "CRM & Sales",    items: ["HubSpot",  "Salesforce",  "Pipedrive", "Notion"]        },
-              { cat: "E-Commerce",     items: ["Shopify",  "WooCommerce", "Magento",   "Custom"]        },
-              { cat: "Finance & Ops",  items: ["Xero",     "QuickBooks",  "SAP",       "Monday.com"]    },
+              { cat: "AI Models",         items: ["OpenAI GPT-4o", "Anthropic Claude 3.5", "Google Gemini 1.5", "Llama 3 (open-source)"] },
+              { cat: "Agent Frameworks",  items: ["LangChain / LangGraph", "n8n AI Workflows", "Flowise", "CrewAI / AutoGen"]             },
+              { cat: "Communication",     items: ["WhatsApp Business API", "Email (SMTP/API)", "Slack", "Intercom"]                       },
+              { cat: "CRM & E-Commerce",  items: ["HubSpot", "Shopify", "WooCommerce", "Pipedrive"]                                       },
             ].map((col, i) => (
               <div key={col.cat} className={`sector rv d${i + 1}`} style={{ padding: "22px 20px" }}>
                 <div className="sector-name" style={{ marginBottom: 12 }}>{col.cat}</div>

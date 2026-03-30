@@ -4,9 +4,14 @@ import PageHero   from "@/components/PageHero";
 import Link       from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services — Agenix",
+  title: "Services",
   description:
-    "E-Commerce stores, AI agents, and workflow automation — built end-to-end, from idea to production deployment.",
+    "Shopify store development, custom AI agents, and business workflow automation — built end-to-end by Dizilo. Fixed prices, fast delivery, no long discovery processes.",
+  keywords: [
+    "AI agency", "Shopify development agency", "workflow automation agency",
+    "hire AI agent developer", "build Shopify store", "automation services UK",
+  ],
+  alternates: { canonical: "https://dizilo.com/services" },
 };
 
 const services = [
@@ -56,7 +61,7 @@ const services = [
       "Multi-system synchronisation",
       "Ongoing optimisation after launch",
     ],
-    stat: { v: "5d → 4h", l: "Month-end close time (Stratum Finance)" },
+    stat: { v: "5d → 4h", l: "Month-end close time (finance client)" },
   },
 ];
 

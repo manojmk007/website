@@ -35,6 +35,7 @@ function NavLink({
 
   const finalHref = hash ? `${href}#${hash}` : href;
 
+  // Highlight page links by pathname; highlight hash-links when on home page
   const isActive = hash
     ? pathname === "/"
     : href !== "/" && pathname.startsWith(href);
@@ -48,7 +49,17 @@ function NavLink({
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const close = useCallback(() => setOpen(false), []);
+  const close = useCallback(() => {
+    setOpen(false);
+    document.body.style.overflow = "";
+  }, []);
+
+  const toggle = useCallback(() => {
+    setOpen((o) => {
+      document.body.style.overflow = !o ? "hidden" : "";
+      return !o;
+    });
+  }, []);
 
   return (
     <>
@@ -59,7 +70,7 @@ export default function Nav() {
             alt="Dizilo"
             width={90}
             height={32}
-            style={{ objectFit: "contain", objectPosition: "left center", mixBlendMode: "screen" }}
+            style={{ objectFit: "contain", objectPosition: "left center" }}
             priority
           />
         </Link>
@@ -72,12 +83,12 @@ export default function Nav() {
 
         <div className="n-right">
           <Link href="/case-studies" className="nb nb-o">See Results</Link>
-          <Link href="/contact"      className="nb nb-w">Get Started</Link>
+          <Link href="/book"         className="nb nb-w">Book a Call</Link>
         </div>
 
         <button
           className="ham"
-          onClick={() => setOpen((o) => !o)}
+          onClick={toggle}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls="mobMenu"
@@ -102,7 +113,7 @@ export default function Nav() {
           See Results
         </Link>
         <div className="mob-cta">
-          <Link href="/contact" className="nb nb-w" onClick={close}>Get Started</Link>
+          <Link href="/book" className="nb nb-w" onClick={close}>Book a Call</Link>
         </div>
       </div>
     </>

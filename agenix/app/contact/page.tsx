@@ -4,9 +4,10 @@ import PageHero   from "@/components/PageHero";
 import Contact    from "@/components/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact — Agenix",
+  title: "Contact",
   description:
-    "Start a project with Agenix. Tell us what you need — we'll come back with a clear plan and a fixed price within one business day.",
+    "Hire Dizilo to build your Shopify store, AI agent, or workflow automation. Fixed price, fast delivery. Tell us what you need — we respond within one business day.",
+  alternates: { canonical: "https://dizilo.com/contact" },
 };
 
 const faqs = [

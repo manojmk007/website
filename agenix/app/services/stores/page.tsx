@@ -4,9 +4,20 @@ import PageHero   from "@/components/PageHero";
 import Link       from "next/link";
 
 export const metadata: Metadata = {
-  title: "E-Commerce Stores — Agenix",
+  title: "E-Commerce Stores",
+  alternates: { canonical: "https://dizilo.com/services/stores" },
   description:
-    "Shopify, WooCommerce, and fully custom e-commerce stores — built to sell, designed to scale, and ready for catalogues of any size.",
+    "Shopify and WooCommerce store development agency. Custom themes, headless commerce, product imports, payment setup, and AI-powered support agents. Built to sell from day one.",
+  keywords: [
+    "Shopify development", "WooCommerce development", "e-commerce store builder",
+    "Shopify agency UK", "custom Shopify theme", "headless commerce",
+    "WooCommerce agency", "build online store", "e-commerce developer",
+    "Shopify store setup", "WooCommerce setup",
+  ],
+  openGraph: {
+    title: "Shopify & WooCommerce Store Development — Dizilo",
+    description: "Custom Shopify and WooCommerce stores built to sell. Themes, payments, AI support agents — end to end.",
+  },
 };
 
 const platforms = [
@@ -183,14 +194,14 @@ export default function StoresPage() {
           <div className="res-grid" style={{ marginTop: 36 }}>
             <div className="rc rv d1">
               <div className="rc-cat">E-Commerce · WooCommerce + Agent</div>
-              <div className="rc-title">Nexus Retail cut support costs 70% after adding a store agent</div>
+              <div className="rc-title">An e-commerce client cut support costs 70% after adding a store agent</div>
               <p className="rc-body">A support agent built into their WooCommerce store handles order queries, returns, and complaints across chat and WhatsApp. Customer satisfaction went up, costs went down.</p>
               <dl className="rc-mini" style={{ marginTop: 16 }}>
                 <div><dd style={{ fontSize: "1.1rem", fontWeight: 700, letterSpacing: "-.025em", lineHeight: 1 }}>−70%</dd><dt style={{ fontSize: ".65rem", color: "var(--t3)", marginTop: 3 }}>Support cost</dt></div>
                 <div><dd style={{ fontSize: "1.1rem", fontWeight: 700, letterSpacing: "-.025em", lineHeight: 1 }}>4.9/5</dd><dt style={{ fontSize: ".65rem", color: "var(--t3)", marginTop: 3 }}>CSAT (was 3.8)</dt></div>
               </dl>
               <div className="rc-hr" />
-              <div className="rc-co">Nexus Retail · D2C e-commerce</div>
+              <div className="rc-co">D2C e-commerce (name withheld)</div>
             </div>
             <div className="rc rv d2" style={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", background: "var(--bg2)" }}>
               <div style={{ fontSize: "2.4rem", fontWeight: 700, letterSpacing: "-.04em", lineHeight: 1 }}>2 weeks</div>

@@ -12,7 +12,7 @@ export default function Results() {
             <div>
               <div className="rc-cat">B2B SaaS · Sales Agent</div>
               <div className="rc-title">
-                Meridian SaaS tripled their pipeline in 90 days — without a single
+                A B2B SaaS client tripled their pipeline in 90 days — without a single
                 new hire
               </div>
               <p className="rc-body">
@@ -22,7 +22,7 @@ export default function Results() {
                 now only speaks to people who are ready to buy.
               </p>
               <div className="rc-hr" />
-              <div className="rc-co">Meridian SaaS — B2B software company</div>
+              <div className="rc-co">B2B SaaS — Software company (name withheld)</div>
             </div>
             <div>
               <dl className="rc-nums">
@@ -49,7 +49,7 @@ export default function Results() {
           <div className="rc rv d1">
             <div className="rc-cat">E-Commerce · Store + Agent</div>
             <div className="rc-title">
-              Nexus Retail cut support costs 70% after adding a store agent
+              An e-commerce client cut support costs 70% after adding a store agent
             </div>
             <p className="rc-body">
               A support agent built into their WooCommerce store handles order
@@ -67,13 +67,13 @@ export default function Results() {
               </div>
             </dl>
             <div className="rc-hr" />
-            <div className="rc-co">Nexus Retail · D2C e-commerce</div>
+            <div className="rc-co">D2C e-commerce (name withheld)</div>
           </div>
 
           <div className="rc rv d2">
             <div className="rc-cat">Finance · Automation</div>
             <div className="rc-title">
-              Stratum Finance closed the month in 4 hours instead of 5 days
+              A finance client closed the month in 4 hours instead of 5 days
             </div>
             <p className="rc-body">
               An invoice processing agent handles 2,000 documents a month at 99.97%
@@ -91,7 +91,7 @@ export default function Results() {
               </div>
             </dl>
             <div className="rc-hr" />
-            <div className="rc-co">Stratum Finance · Financial services</div>
+            <div className="rc-co">Financial services (name withheld)</div>
           </div>
         </div>
       </div>

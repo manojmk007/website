@@ -3,14 +3,14 @@ import PageLayout from "@/components/PageLayout";
 import PageHero   from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Agenix",
-  description: "How Agenix collects, uses, and protects your personal information.",
+  title: "Privacy Policy",
+  description: "How Dizilo collects, uses, and protects your personal information.",
 };
 
 const sections = [
   {
     title: "Who we are",
-    body: `Agenix Ltd is a technology company based in London, United Kingdom. We build e-commerce stores, AI agents, and workflow automations for businesses. Our registered address is available on request. You can contact us at hello@agenix.co or +44 20 7946 0392.`,
+    body: `Dizilo Ltd is a technology company based in Birmingham, United Kingdom. We build e-commerce stores, AI agents, and workflow automations for businesses. Our registered address is available on request. You can contact us at dizilopartner@gmail.com.`,
   },
   {
     title: "What information we collect",
@@ -38,7 +38,7 @@ const sections = [
   },
   {
     title: "Your rights",
-    body: `Under UK GDPR and the Data Protection Act 2018, you have the right to: access the personal data we hold about you; correct inaccurate data; request deletion of your data; object to or restrict processing; and data portability. To exercise any of these rights, email hello@agenix.co. We will respond within 30 days.`,
+    body: `Under UK GDPR and the Data Protection Act 2018, you have the right to: access the personal data we hold about you; correct inaccurate data; request deletion of your data; object to or restrict processing; and data portability. To exercise any of these rights, email dizilopartner@gmail.com. We will respond within 30 days.`,
   },
   {
     title: "Data security",
@@ -50,7 +50,7 @@ const sections = [
   },
   {
     title: "Contact",
-    body: `For any privacy-related questions or requests, contact us at hello@agenix.co or write to Agenix Ltd, London, United Kingdom.`,
+    body: `For any privacy-related questions or requests, contact us at dizilopartner@gmail.com or write to Dizilo Ltd, Birmingham, United Kingdom.`,
   },
 ];
 

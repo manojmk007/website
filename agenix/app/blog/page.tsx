@@ -5,8 +5,9 @@ import Link       from "next/link";
 import { posts, catColors } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Blog — Agenix",
-  description: "Insights on AI agents, e-commerce, and workflow automation from the Agenix team.",
+  title: "Blog",
+  alternates: { canonical: "https://dizilo.com/blog" },
+  description: "Insights on AI agents, e-commerce, and workflow automation from the Dizilo team.",
 };
 
 export default function BlogPage() {
@@ -20,7 +21,7 @@ export default function BlogPage() {
 
       <section style={{ padding: "80px 0" }}>
         <div className="w">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
+          <div className="tst-grid">
             {posts.map((post, i) => (
               <Link
                 key={post.slug}

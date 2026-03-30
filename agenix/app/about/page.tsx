@@ -4,9 +4,10 @@ import PageHero   from "@/components/PageHero";
 import Link       from "next/link";
 
 export const metadata: Metadata = {
-  title: "About — Agenix",
+  title: "About",
   description:
-    "We're a small team that builds the technology that makes every job easier — stores, AI agents, and workflow automation, end-to-end.",
+    "Dizilo is a Birmingham-based agency that builds Shopify stores, custom AI agents, and workflow automation for businesses worldwide. Small team, fast delivery, fixed prices.",
+  alternates: { canonical: "https://dizilo.com/about" },
 };
 
 const values = [
@@ -43,7 +44,7 @@ export default function AboutPage() {
   return (
     <PageLayout>
       <PageHero
-        label="About Agenix"
+        label="About Dizilo"
         title={<>We&apos;re the team that<br /><span className="m">builds the tech.</span></>}
         subtitle="A small, focused team building stores, AI agents, and automation that actually work — end-to-end, from idea to production."
       />

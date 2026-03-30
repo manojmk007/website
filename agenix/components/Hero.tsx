@@ -68,7 +68,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-btns">
-          <a href="#contact" className="hbtn hbtn-p">Start a Project →</a>
+          <a href="/#contact" className="hbtn hbtn-p">Start a Project →</a>
           <a href="#what"    className="hbtn hbtn-g">See What We Build</a>
         </div>
       </div>

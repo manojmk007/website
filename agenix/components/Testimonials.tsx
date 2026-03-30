@@ -2,23 +2,23 @@ const testimonials = [
   {
     quote:
       "Our SDRs used to spend most of their day sorting through leads. Now they only talk to people who are ready. Pipeline tripled in a quarter and we didn't add a single person to the team.",
-    initials: "JR",
-    name: "James Rothwell",
-    role: "CEO, Meridian SaaS",
+    initials: "—",
+    name: "SaaS Founder",
+    role: "B2B SaaS · Lead qualification automation",
   },
   {
     quote:
       "We were sceptical about adding a support agent to our store. But CSAT went from 3.8 to 4.9 and support costs dropped 70%. Customers don't care if it's AI — they care about getting a fast, accurate answer.",
-    initials: "AS",
-    name: "Ananya Shah",
-    role: "Head of CX, Nexus Retail",
+    initials: "—",
+    name: "Head of CX",
+    role: "E-Commerce · AI support agent",
   },
   {
     quote:
-      "We'd spoken to larger agencies who wanted six months to scope the work. Agenix had us live in two weeks with results in the first few days. That's the difference between a consultancy and a team that actually builds things.",
-    initials: "DV",
-    name: "David Vance",
-    role: "CTO, Solara Energy",
+      "We'd spoken to larger agencies who wanted six months to scope the work. Dizilo had us live in two weeks with results in the first few days. That's the difference between a consultancy and a team that actually builds things.",
+    initials: "—",
+    name: "CTO",
+    role: "Financial services · Workflow automation",
   },
 ];
 

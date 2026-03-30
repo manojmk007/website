@@ -17,8 +17,16 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Agenix Blog`,
+    title: post.title,
     description: post.excerpt,
+    keywords: [post.cat, "Dizilo blog", "AI agents", "e-commerce", "workflow automation"],
+    alternates: { canonical: `https://dizilo.com/blog/${slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `https://dizilo.com/blog/${slug}`,
+    },
   };
 }
 
@@ -173,9 +181,12 @@ export default async function BlogPostPage({
   );
 }
 
-/** Convert **bold** and *italic* to HTML — no external deps needed */
+/** Escape HTML then convert **bold** and *italic* — prevents XSS */
 function renderInline(text: string): string {
   return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>");
 }

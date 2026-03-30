@@ -3,14 +3,14 @@ import PageLayout from "@/components/PageLayout";
 import PageHero   from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Agenix",
-  description: "Terms and conditions for working with Agenix.",
+  title: "Terms of Service",
+  description: "Terms and conditions for working with Dizilo.",
 };
 
 const sections = [
   {
     title: "Services",
-    body: `Agenix Ltd provides technology services including e-commerce store development, AI agent development, and workflow automation. The specific scope of work, deliverables, timeline, and price for each project are agreed in writing before work begins. We do not begin work until the scope and price are confirmed by both parties.`,
+    body: `Dizilo Ltd provides technology services including e-commerce store development, AI agent development, and workflow automation. The specific scope of work, deliverables, timeline, and price for each project are agreed in writing before work begins. We do not begin work until the scope and price are confirmed by both parties.`,
   },
   {
     title: "Pricing & payment",
@@ -46,7 +46,7 @@ const sections = [
   },
   {
     title: "Contact",
-    body: `For any questions about these terms, contact hello@agenix.co or write to Agenix Ltd, London, United Kingdom.`,
+    body: `For any questions about these terms, contact dizilopartner@gmail.com or write to Dizilo Ltd, Birmingham, United Kingdom.`,
   },
 ];
 

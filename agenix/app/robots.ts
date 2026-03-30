@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://agenix.co.uk/sitemap.xml",
+    sitemap: "https://dizilo.com/sitemap.xml",
   };
 }

@@ -9,10 +9,15 @@ export default function Contact() {
   const [errorMsg, setErrorMsg] = useState("");
   const id = useId();
 
-  const FORM_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "YOUR_FORM_ID";
+  const WEBHOOK_URL = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL ?? "";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!WEBHOOK_URL) {
+      setErrorMsg("Contact form not configured yet — please email us directly at dizilopartner@gmail.com");
+      setState("error");
+      return;
+    }
     setState("sending");
     setErrorMsg("");
 
@@ -21,10 +26,14 @@ export default function Contact() {
     const timeout = setTimeout(() => controller.abort(), 10000);
 
     try {
-      const res = await fetch(`https://formspree.io/f/${FORM_ID}`, {
+      const formData = new FormData(form);
+      const body: Record<string, string> = {};
+      formData.forEach((v, k) => { body[k] = v.toString(); });
+
+      const res = await fetch(WEBHOOK_URL, {
         method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
+        body: JSON.stringify(body),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         signal: controller.signal,
       });
       clearTimeout(timeout);
@@ -58,18 +67,12 @@ export default function Contact() {
               <div className="ct-row">
                 <div className="ct-k">Email</div>
                 <div className="ct-v">
-                  <a href="mailto:hello@agenix.co">hello@agenix.co</a>
-                </div>
-              </div>
-              <div className="ct-row">
-                <div className="ct-k">Phone</div>
-                <div className="ct-v">
-                  <a href="tel:+442079460392">+44 20 7946 0392</a>
+                  <a href="mailto:dizilopartner@gmail.com">dizilopartner@gmail.com</a>
                 </div>
               </div>
               <div className="ct-row">
                 <div className="ct-k">Based in</div>
-                <div className="ct-v">London, UK · Working worldwide</div>
+                <div className="ct-v">Birmingham, UK · Working worldwide</div>
               </div>
             </div>
           </div>
@@ -96,7 +99,7 @@ export default function Contact() {
                     tabIndex={-1}
                     autoComplete="off"
                   />
-                  <input type="hidden" name="_subject" value="New project enquiry — Agenix website" />
+                  <input type="hidden" name="_subject" value="New project enquiry — Dizilo website" />
 
                   <div className="fb">
                     <div className="fr">
@@ -153,7 +156,7 @@ export default function Contact() {
                         className="fi"
                         type="text"
                         name="company"
-                        placeholder="Acme Ltd"
+                        placeholder="Your company"
                         autoComplete="organization"
                       />
                     </div>
@@ -193,7 +196,14 @@ export default function Contact() {
 
                     {(state === "error" || state === "network-error") && (
                       <p className="form-error" role="alert">
-                        {errorMsg}
+                        {errorMsg}{" "}
+                        <button
+                          type="button"
+                          onClick={() => { setState("idle"); setErrorMsg(""); }}
+                          style={{ color: "inherit", textDecoration: "underline", background: "none", border: "none", cursor: "pointer", fontSize: "inherit", padding: 0 }}
+                        >
+                          Try again
+                        </button>
                       </p>
                     )}
 

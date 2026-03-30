@@ -4,9 +4,19 @@ import PageHero   from "@/components/PageHero";
 import Link       from "next/link";
 
 export const metadata: Metadata = {
-  title: "Workflow Automation — Agenix",
+  title: "Workflow Automation",
+  alternates: { canonical: "https://dizilo.com/services/automation" },
   description:
-    "End-to-end workflow automation — we map your operations and automate the steps that don't need a human. Less manual work, fewer errors, faster results.",
+    "Business workflow automation built with n8n, Make, and AI. Automate invoices, CRM, lead routing, HR, and finance processes. GenAI-enhanced pipelines — from mapping to production.",
+  keywords: [
+    "n8n automation", "workflow automation agency", "business process automation",
+    "n8n agency UK", "AI workflow automation", "Make automation", "invoice automation",
+    "CRM automation", "GenAI workflow", "automate business Birmingham", "n8n developer",
+  ],
+  openGraph: {
+    title: "Workflow Automation Services — Dizilo",
+    description: "Automate invoices, CRM, lead routing and more with n8n and AI. Less manual work, fewer errors, faster results.",
+  },
 };
 
 const automations = [
@@ -49,10 +59,10 @@ const automations = [
 ];
 
 const tools = [
-  { cat: "Automation Platforms", items: ["Zapier", "Make (Integromat)", "n8n", "Custom pipelines"] },
-  { cat: "Data & Documents",     items: ["Google Workspace", "Microsoft 365", "Notion", "Airtable"]  },
-  { cat: "Communication",        items: ["Slack", "Email (SMTP/API)", "WhatsApp", "Teams"]            },
-  { cat: "Finance",              items: ["Xero", "QuickBooks", "Sage", "SAP"]                         },
+  { cat: "Automation Platforms", items: ["n8n (primary)", "Make (Integromat)", "Zapier", "Custom-built pipelines"] },
+  { cat: "AI & GenAI",           items: ["OpenAI GPT-4o", "Anthropic Claude", "LangChain", "Vector DBs (Pinecone)"] },
+  { cat: "Data & Documents",     items: ["Google Workspace", "Microsoft 365", "Notion", "Airtable"]                 },
+  { cat: "Finance & Ops",        items: ["Xero", "QuickBooks", "SAP", "Monday.com"]                                 },
 ];
 
 export default function AutomationPage() {
@@ -60,15 +70,15 @@ export default function AutomationPage() {
     <PageLayout>
       <PageHero
         label="Workflow Automation"
-        title={<>Automate the work<br /><span className="m">that doesn&apos;t need you.</span></>}
-        subtitle="We map your operations and build automations that run without human oversight — fewer errors, less time, more done."
+        title={<>If you do it every day,<br /><span className="m">we can automate it.</span></>}
+        subtitle="Any task your team repeats — daily, weekly, monthly — we can build a system that does it automatically. No manual work, no missed steps, no one wasting their day on the same job again."
       />
 
       {/* What we automate */}
       <section style={{ padding: "80px 0" }}>
         <div className="w">
           <span className="s-label rv">What We Automate</span>
-          <h2 className="s-h rv d1">Six areas where automation delivers the most</h2>
+          <h2 className="s-h rv d1">If it repeats, it can be automated</h2>
           <div className="agents-grid" style={{ marginTop: 36 }}>
             {automations.map((a, i) => (
               <div key={a.n} className={`ag rv d${(i % 3) + 1}`}>
@@ -97,10 +107,10 @@ export default function AutomationPage() {
             <div className="rc big rv">
               <div>
                 <div className="rc-cat">Finance · Invoice Automation</div>
-                <div className="rc-title">Stratum Finance closed the month in 4 hours instead of 5 days</div>
+                <div className="rc-title">A finance client closed the month in 4 hours instead of 5 days</div>
                 <p className="rc-body">An invoice processing automation handles 2,000 documents a month at 99.97% accuracy. Three staff who spent entire weeks on data entry now focus on analysis and client work.</p>
                 <div className="rc-hr" />
-                <div className="rc-co">Stratum Finance · Financial services</div>
+                <div className="rc-co">Financial services (name withheld)</div>
               </div>
               <div>
                 <dl className="rc-nums">
